@@ -1,50 +1,63 @@
+
+import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
+
 export const Hero = () => {
   return (
-    <section
-      className="bg-[rgba(215,215,215,1)] overflow-hidden pl-20 pt-[94px] max-md:pl-5"
-      id="about"
-    >
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-        <div className="w-[32%] max-md:w-full max-md:ml-0">
-          <div className="z-10 flex w-full flex-col self-stretch my-auto max-md:max-w-full max-md:mr-[-17px] max-md:mt-10">
-            <div className="self-stretch flex flex-col items-stretch text-black font-bold text-center pl-[5px] max-md:max-w-full">
-              <h1 className="text-[40px]">
-                Hi, I am
-                <span className="text-[75px] block mt-[7px] max-md:text-[40px]">
-                  Aditya Sharma
-                </span>
-              </h1>
-            </div>
-            <p className="text-[rgba(144,144,144,1)] text-[25px] font-extrabold text-center mt-[25px] max-md:max-w-full">
-              Full-Stack Developer (MERN Stack)
+    <section className="relative min-h-screen pt-24 px-6 md:px-12 flex items-center">
+      <div className="absolute inset-0 bg-[#0F0F0F] z-[-1]">
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-radial from-[#7B4AE280] to-transparent opacity-20"></div>
+      </div>
+      
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              Creative <span className="text-[#7B4AE2]">design</span> and <span className="text-[#7B4AE2]">development</span> studio
+            </h1>
+            
+            <p className="text-white/70 text-lg max-w-md">
+              I design and code beautifully simple things, and I love what I do.
             </p>
-            <div className="flex items-stretch gap-[31px] mt-[142px] max-md:mt-10">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/858ca6d4033a4218bb353dfcd0669a338014557c?placeholderIfAbsent=true"
-                alt="Social Icon 1"
-                className="aspect-[1.09] object-contain w-[61px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] shrink-0"
+            
+            <div className="flex space-x-4 pt-4">
+              <Button 
+                className="bg-[#7B4AE2] hover:bg-[#6B3AD2] text-white rounded-full px-8 py-6"
+                asChild
+              >
+                <a href="#contact">Let's talk</a>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="text-white border-white/20 rounded-full px-8 py-6 hover:bg-white/5"
+                asChild
+              >
+                <a href="#projects">My work</a>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="w-full md:w-1/2 mt-12 md:mt-0">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3"
+                alt="Hero Image" 
+                className="rounded-lg object-cover h-[500px] w-full"
               />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/d61fb768912c12483f219ad70da6ef1c4a5ccb1d?placeholderIfAbsent=true"
-                alt="Social Icon 2"
-                className="aspect-[1.09] object-contain w-[61px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] shrink-0"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/798c968755a06bad186b2581fe2a758c376a5a02?placeholderIfAbsent=true"
-                alt="Social Icon 3"
-                className="aspect-[1.09] object-contain w-[61px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] shrink-0"
-              />
+              <div className="absolute inset-0 bg-[#7B4AE2]/20 rounded-lg"></div>
             </div>
           </div>
         </div>
-        <div className="w-[68%] ml-5 max-md:w-full max-md:ml-0">
-          <div className="relative min-h-[1022px] max-md:min-h-[500px]">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/da75e6d03944d1ea1159e322cad422c10e2a662f?placeholderIfAbsent=true"
-              alt="Hero Background"
-              className="absolute h-full w-full object-cover inset-0"
-            />
-          </div>
+        
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <a 
+            href="#about"
+            className="flex flex-col items-center text-white/70 hover:text-white transition-colors"
+          >
+            <span className="text-sm mb-2">Scroll down</span>
+            <ArrowDown size={20} className="animate-bounce" />
+          </a>
         </div>
       </div>
     </section>

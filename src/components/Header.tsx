@@ -1,27 +1,70 @@
+
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-[rgba(11,11,11,1)] flex w-full items-center gap-[40px_83px] text-[17px] text-white font-bold text-center flex-wrap px-[73px] py-2.5 fixed top-0 z-50 max-md:px-5">
-      <nav className="flex items-center gap-[40px] flex-wrap">
-        <Link to="#about" className="hover:text-gray-300 transition-colors">
-          About me
-        </Link>
-        <Link to="#skills" className="hover:text-gray-300 transition-colors">
-          Skills
-        </Link>
-        <Link to="#projects" className="hover:text-gray-300 transition-colors">
-          Projects
-        </Link>
-      </nav>
-      <Button
-        variant="outline"
-        className="bg-white text-[15px] text-black px-[22px] py-[18px] rounded-[30px] border-white border-4 hover:bg-transparent hover:text-white transition-colors"
-        asChild
-      >
-        <Link to="#contact">CONTACT ME</Link>
-      </Button>
+    <header 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-[#0F0F0F] py-4" : "bg-transparent py-6"
+      }`}
+    >
+      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="#" className="font-bold text-2xl">T<span className="text-[#7B4AE2]">.</span></a>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#about" className="text-white/70 hover:text-white transition-colors">About me</a>
+          <a href="#services" className="text-white/70 hover:text-white transition-colors">Services</a>
+          <a href="#projects" className="text-white/70 hover:text-white transition-colors">Projects</a>
+          <a href="#process" className="text-white/70 hover:text-white transition-colors">Process</a>
+          <Button 
+            className="bg-[#7B4AE2] hover:bg-[#6B3AD2] text-white rounded-full px-6"
+            asChild
+          >
+            <a href="#contact">Contact me</a>
+          </Button>
+        </nav>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+      
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#0F0F0F] border-t border-white/10 p-4">
+          <nav className="flex flex-col space-y-4">
+            <a href="#about" className="text-white/70 hover:text-white transition-colors p-2" onClick={() => setIsOpen(false)}>About me</a>
+            <a href="#services" className="text-white/70 hover:text-white transition-colors p-2" onClick={() => setIsOpen(false)}>Services</a>
+            <a href="#projects" className="text-white/70 hover:text-white transition-colors p-2" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="#process" className="text-white/70 hover:text-white transition-colors p-2" onClick={() => setIsOpen(false)}>Process</a>
+            <Button 
+              className="bg-[#7B4AE2] hover:bg-[#6B3AD2] text-white rounded-full w-full"
+              asChild
+              onClick={() => setIsOpen(false)}
+            >
+              <a href="#contact">Contact me</a>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

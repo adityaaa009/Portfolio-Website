@@ -1,59 +1,57 @@
+
+import { Button } from "@/components/ui/button";
+import { DownloadIcon } from "lucide-react";
+
 export const About = () => {
   return (
-    <section
-      className="bg-white py-[182px] px-20 max-md:py-[100px] max-md:px-5"
-      id="about"
-    >
-      <div className="max-w-[1018px] mx-auto">
-        <h2 className="text-black text-3xl font-bold leading-none tracking-[10.66px] text-center">
-          ABOUT ME
-        </h2>
-        <p className="text-[rgba(5,5,5,1)] text-[15px] leading-[21px] text-center mt-[68px] max-md:mt-10">
-          I'm currently in my 3rd year of pursuing a Bachelors degree in
-          Computer Science and Engineering, I'm a passionate full-stack
-          developer with experience in building web applications using modern
-          technologies like React, TypeScript, and Supabase. With a solid
-          foundation in DSA (200+ LeetCode problems) and competitive
-          programming, I bring problem-solving skills to every project. Beyond
-          development, I've contributed to GSSoC, facilitated Google Cloud
-          Arcade, and served as the GDSC DSA Co-lead at my college. When I'm not
-          coding, you might find me participating in hackathons, singing, or
-          exploring new ideas for my next venture.
-        </p>
-        <div className="flex justify-center items-center gap-5 mt-10">
-          <div className="w-0.5 h-8 border-black border-solid border-2" />
-          <span className="text-[15px] font-semibold">EXPLORE</span>
-          <div className="w-0.5 h-8 border-black border-solid border-2" />
-        </div>
-        <div className="mt-[85px] grid grid-cols-2 gap-10 max-md:grid-cols-1">
-          <div className="text-sm text-black">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/6c95fabb6b2d1377d5cf7dee1457d648b8f0c959?placeholderIfAbsent=true"
-              alt="Design Icon"
-              className="w-[143px] mb-4"
-            />
-            <p className="ml-[37px]">
-              I provide expert visual design services, crafting unique and
-              effective logos, branding, and UI/UX designs that elevate your
-              brand's identity.
-            </p>
-          </div>
-          <div className="text-black">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/4d354354350c8cf3f10a59e7958ff73dd5d8b53d?placeholderIfAbsent=true"
-                alt="Development Icon"
-                className="w-[69px]"
+    <section id="about" className="py-24 px-6 md:px-12 bg-[#151515]">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row gap-12 items-center">
+          <div className="w-full md:w-1/2">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3"
+                alt="Profile Image" 
+                className="rounded-lg object-cover h-[500px] w-full"
               />
-              <h3 className="text-[22px] font-bold tracking-[4.08px]">
-                DEVELOPMENT
-              </h3>
+              <div className="absolute inset-0 bg-[#7B4AE2]/10 rounded-lg"></div>
             </div>
-            <p className="text-sm mt-4">
-              I specialize in building high-quality, responsive, and accessible
-              websites and web applications using a range of front-end and
-              back-end technologies.
+          </div>
+          
+          <div className="w-full md:w-1/2 space-y-6">
+            <h2 className="text-sm uppercase tracking-wider text-[#7B4AE2]">About me</h2>
+            <h3 className="text-3xl md:text-4xl font-bold">I'm a Professional Designer & Developer</h3>
+            
+            <p className="text-white/70">
+              I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.
             </p>
+            
+            <div className="grid grid-cols-2 gap-6 py-4">
+              <div>
+                <h4 className="text-xl font-bold">5+</h4>
+                <p className="text-white/70">Years of Experience</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">100+</h4>
+                <p className="text-white/70">Projects Completed</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">50+</h4>
+                <p className="text-white/70">Happy Clients</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">10+</h4>
+                <p className="text-white/70">Awards Won</p>
+              </div>
+            </div>
+            
+            <Button 
+              variant="outline" 
+              className="text-white border-white/20 rounded-full px-6 py-5 hover:bg-white/5"
+            >
+              <DownloadIcon size={16} className="mr-2" />
+              Download CV
+            </Button>
           </div>
         </div>
       </div>

@@ -1,60 +1,55 @@
+
+import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
+
 export const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const socialLinks = [
+    { icon: <Github size={20} />, url: "https://github.com" },
+    { icon: <Twitter size={20} />, url: "https://twitter.com" },
+    { icon: <Linkedin size={20} />, url: "https://linkedin.com" },
+    { icon: <Instagram size={20} />, url: "https://instagram.com" }
+  ];
+
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[rgba(26,26,26,1)] px-20 py-[72px] max-md:px-5">
-      <div className="max-w-[357px] mx-auto text-center">
-        <button
-          onClick={scrollToTop}
-          className="flex flex-col items-center gap-4 w-full hover:opacity-80 transition-opacity"
-        >
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/1e0e40f9d510770385e336a274aca9b6ec2202aa?placeholderIfAbsent=true"
-            alt="Arrow Up"
-            className="w-[15px]"
-          />
-          <span className="text-white text-[15px] font-bold tracking-[2.78px]">
-            BACK TO TOP
-          </span>
-        </button>
-
-        <div className="flex justify-center gap-5 mt-[52px]">
-          <a href="#" className="hover:opacity-80 transition-opacity">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/b0ade5df0c28d42edb2f61965e44f8978485f734?placeholderIfAbsent=true"
-              alt="Social Icon"
-              className="w-[30px]"
-            />
-          </a>
-          <a href="#" className="hover:opacity-80 transition-opacity">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/dd4f498b331d0af6358f9d6a4990e473f65af68e?placeholderIfAbsent=true"
-              alt="Social Icon"
-              className="w-[30px]"
-            />
-          </a>
-          <a href="#" className="hover:opacity-80 transition-opacity">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/b15b65b6c12eb5407f0071484e274bc38602a69c?placeholderIfAbsent=true"
-              alt="Social Icon"
-              className="w-[30px]"
-            />
-          </a>
-          <a href="#" className="hover:opacity-80 transition-opacity">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/8f7387d3a7314782b87a264858bb7881/b7dd1023a55f251086890aa78196a09c7aba1220?placeholderIfAbsent=true"
-              alt="Social Icon"
-              className="w-[30px]"
-            />
-          </a>
+    <footer className="bg-[#0F0F0F] border-t border-white/10 py-12 px-6 md:px-12">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <a href="#" className="font-bold text-2xl">T<span className="text-[#7B4AE2]">.</span></a>
+            <p className="text-white/50 mt-2">
+              Designing and developing beautiful digital experiences.
+            </p>
+          </div>
+          
+          <div className="flex space-x-4">
+            {socialLinks.map((link, index) => (
+              <a 
+                key={index}
+                href={link.url}
+                className="bg-[#1A1A1A] hover:bg-[#7B4AE2] transition-colors duration-300 rounded-full w-10 h-10 flex items-center justify-center text-white/70 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
-
-        <p className="text-white text-lg mt-11">
-          <span className="font-bold">@2025 Aditya Sharma </span>
-          <span>All Rights Reserved.</span>
-        </p>
+        
+        <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-white/50 text-sm">
+            © {currentYear} Tomasz Gajda. All rights reserved.
+          </p>
+          
+          <div className="mt-4 md:mt-0">
+            <ul className="flex space-x-6 text-sm text-white/50">
+              <li><a href="#" className="hover:text-[#7B4AE2] transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-[#7B4AE2] transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-[#7B4AE2] transition-colors">Cookies Settings</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   );
