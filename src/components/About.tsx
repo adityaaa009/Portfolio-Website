@@ -1,58 +1,49 @@
 
-import { Button } from "@/components/ui/button";
-import { DownloadIcon } from "lucide-react";
-
 export const About = () => {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 bg-[#151515]">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3"
-                alt="Profile Image" 
-                className="rounded-lg object-cover h-[500px] w-full"
-              />
-              <div className="absolute inset-0 bg-[#7B4AE2]/10 rounded-lg"></div>
-            </div>
+    <section id="about" className="py-24 px-6 md:px-12 bg-[#e6e6e6]">
+      <div className="container mx-auto max-w-4xl">
+        <div className="flex flex-col items-center mb-16">
+          <h2 className="section-header mb-16">ABOUT ME</h2>
+          
+          <p className="text-center text-sm leading-relaxed max-w-3xl">
+            I'm currently in my 3rd year of pursuing a Bachelors degree in Computer Science and Engineering. I'm a passionate full-stack developer with experience in building web applications using modern technologies like React, TypeScript, and Supabase. With a solid foundation in DSA (200+ LeetCode problems) and competitive programming, I bring problem-solving skills to every project. Beyond development, I've contributed to GSSoC, facilitated Google Cloud Arcade, and served as the GDSC DSA Co-lead at my college. When I'm not coding, you might find me participating in hackathons, singing, or exploring new ideas for my next venture.
+          </p>
+          
+          <button className="border-2 border-black px-8 py-2 mt-8 text-sm hover:bg-black hover:text-white transition-colors">
+            EXPLORE
+          </button>
+          
+          <div className="separator mt-16">
+            <span></span>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="bg-[#f2f2f2] p-8 shadow-md">
+            <h3 className="text-base font-bold tracking-wide mb-4">DESIGN</h3>
+            <p className="text-sm leading-relaxed">
+              I provide expert visual design services, crafting unique and effective logos, branding, and UI/UX designs that elevate your brand's identity.
+            </p>
           </div>
           
-          <div className="w-full md:w-1/2 space-y-6">
-            <h2 className="text-sm uppercase tracking-wider text-[#7B4AE2]">About me</h2>
-            <h3 className="text-3xl md:text-4xl font-bold">I'm a Professional Designer & Developer</h3>
-            
-            <p className="text-white/70">
-              I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.
+          <div className="bg-[#f2f2f2] p-8 shadow-md">
+            <h3 className="text-base font-bold tracking-wide mb-4">DEVELOPMENT</h3>
+            <p className="text-sm leading-relaxed">
+              I specialize in building high-quality, responsive, and accessible websites and web applications using a range of front-end and back-end technologies.
             </p>
-            
-            <div className="grid grid-cols-2 gap-6 py-4">
-              <div>
-                <h4 className="text-xl font-bold">5+</h4>
-                <p className="text-white/70">Years of Experience</p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold">100+</h4>
-                <p className="text-white/70">Projects Completed</p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold">50+</h4>
-                <p className="text-white/70">Happy Clients</p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold">10+</h4>
-                <p className="text-white/70">Awards Won</p>
-              </div>
-            </div>
-            
-            <Button 
-              variant="outline" 
-              className="text-white border-white/20 rounded-full px-6 py-5 hover:bg-white/5"
-            >
-              <DownloadIcon size={16} className="mr-2" />
-              Download CV
-            </Button>
           </div>
+          
+          <div className="bg-[#f2f2f2] p-8 shadow-md">
+            <h3 className="text-base font-bold tracking-wide mb-4">MAINTENANCE</h3>
+            <p className="text-sm leading-relaxed">
+              I offer ongoing maintenance and support services to ensure your website continues to operate smoothly, implementing updates, fixing issues, and making recommendations.
+            </p>
+          </div>
+        </div>
+        
+        <div className="separator mt-16">
+          <span></span>
         </div>
       </div>
     </section>
