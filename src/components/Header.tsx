@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black py-4" : "bg-black py-4"
+        scrolled ? "bg-black py-4" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-end items-center gap-8">

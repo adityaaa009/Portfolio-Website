@@ -40,37 +40,19 @@ export const Hero = () => {
         </div>
         
         {/* Right side - Black with image */}
-        <div className="w-1/2 bg-black relative">
-          <div className="absolute inset-0 flex flex-col justify-between p-6">
-            {/* Navigation on top */}
-            <div className="flex justify-end items-center gap-8 text-sm">
-              <a href="#about" className="text-white hover:text-gray-300 transition-colors">About me</a>
-              <a href="#skills" className="text-white hover:text-gray-300 transition-colors">Skills</a>
-              <a href="#projects" className="text-white hover:text-gray-300 transition-colors">Projects</a>
-              <button className="bg-white text-black rounded-full px-4 py-1 text-sm hover:bg-gray-200">
-                CONTACT ME
-              </button>
-            </div>
-            
-            {/* Profile image will be centered */}
-            <div className="flex-grow flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/cd5c3d3e-f636-43af-be0e-b3c218eb955c.png" 
-                alt="Profile" 
-                className="max-h-[80%] object-contain"
-              />
-            </div>
-            
-            {/* Empty space at bottom for visual balance */}
-            <div></div>
-          </div>
+        <div className="w-1/2 bg-black relative flex items-center justify-center">
+          <img 
+            src="/lovable-uploads/5497e637-0a3a-4a08-b3b5-ec4025859a75.png" 
+            alt="Profile" 
+            className="max-h-[80%] object-contain"
+          />
         </div>
       </div>
       
-      {/* Bottom black banner */}
-      <div className="bg-[#1e1e1e] text-white py-12 px-16">
-        <h2 className="text-2xl font-bold mb-3">We Are Builders of a Connected Future</h2>
-        <p className="text-sm text-gray-300 max-w-3xl mb-6">
+      {/* Bottom black banner (reduced size) */}
+      <div className="bg-[#1e1e1e] text-white py-8 px-16">
+        <h2 className="text-2xl font-bold mb-2">We Are Builders of a Connected Future</h2>
+        <p className="text-sm text-gray-300 max-w-3xl mb-4">
           I believe technology is a bridge — connecting ideas, people, and possibilities. Every line of code has the power to solve problems, spark innovation, and bring us together. My experience spans various industries, and I'm passionate about creating solutions that contribute to our collective growth. Together, we can bridge a future where technology empowers, inspires, and unites us all.
         </p>
         <button className="border border-white px-6 py-2 text-sm hover:bg-white hover:text-black transition-colors">

@@ -7,18 +7,18 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-8 px-6">
+    <footer className="bg-black text-white py-6 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <button
             onClick={scrollToTop}
-            className="flex flex-col items-center mb-8 hover:opacity-80 transition-opacity"
+            className="flex flex-col items-center mb-6 hover:opacity-80 transition-opacity"
           >
-            <span className="text-2xl mb-2">&#8226;</span>
+            <span className="text-2xl mb-1">&#8226;</span>
             <span className="text-xs tracking-widest">BACK TO TOP</span>
           </button>
 
-          <div className="flex justify-center gap-6 mb-8">
+          <div className="flex justify-center gap-6 mb-6">
             <a 
               href="#" 
               className="hover:text-gray-300 transition-colors"
