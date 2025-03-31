@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Github, Mail, ArrowUp } from "lucide-react";
+import { Linkedin, Github, Mail, ArrowUp } from "lucide-react";
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -40,9 +40,9 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400 text-sm">your.email@example.com</li>
-              <li className="text-gray-400 text-sm">+1 (234) 567-8900</li>
-              <li className="text-gray-400 text-sm">Your City, Country</li>
+              <li className="text-gray-400 text-sm">adityalkosharma@gmail.com</li>
+              <li className="text-gray-400 text-sm">+91 98765 43210</li>
+              <li className="text-gray-400 text-sm">New Delhi, India</li>
             </ul>
           </div>
           
@@ -51,7 +51,7 @@ export const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/adityaaa009" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -60,7 +60,7 @@ export const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://linkedin.com/in/aditya-sharma-27624123b/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -69,16 +69,7 @@ export const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://facebook.com/yourusername" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="mailto:your.email@example.com"
+                href="mailto:adityalkosharma@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
