@@ -1,7 +1,5 @@
 # Portfolio Website
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)
-
 Welcome to my portfolio website! You can access the live site [here](https://adityazportfolio.netlify.app/).
 
 ## Table of Contents
