@@ -1,49 +1,90 @@
+import { Code2, GraduationCap, Briefcase } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 bg-[#e6e6e6]">
-      <div className="container mx-auto max-w-4xl">
+    <section id="about" className="py-24 bg-white">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-center mb-16">
-          <h2 className="section-header mb-16">ABOUT ME</h2>
-          
-          <p className="text-center text-sm leading-relaxed max-w-3xl">
-            I'm currently in my 3rd year of pursuing a Bachelors degree in Computer Science and Engineering. I'm a passionate full-stack developer with experience in building web applications using modern technologies like React, TypeScript, and Supabase. With a solid foundation in DSA (200+ LeetCode problems) and competitive programming, I bring problem-solving skills to every project. Beyond development, I've contributed to GSSoC, facilitated Google Cloud Arcade, and served as the GDSC DSA Co-lead at my college. When I'm not coding, you might find me participating in hackathons, singing, or exploring new ideas for my next venture.
-          </p>
-          
-          <button className="border-2 border-black px-8 py-2 mt-8 text-sm hover:bg-black hover:text-white transition-colors">
-            EXPLORE
-          </button>
-          
-          <div className="separator mt-16">
-            <span></span>
-          </div>
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div className="bg-[#f2f2f2] p-8 shadow-md">
-            <h3 className="text-base font-bold tracking-wide mb-4">DESIGN</h3>
-            <p className="text-sm leading-relaxed">
-              I provide expert visual design services, crafting unique and effective logos, branding, and UI/UX designs that elevate your brand's identity.
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* About Content */}
+          <div className="space-y-6">
+            <p className="text-gray-600 leading-relaxed">
+              I am a passionate Full Stack Developer with a strong foundation in web development and a keen eye for creating elegant solutions. My journey in technology began with a curiosity for building things that make a difference.
             </p>
-          </div>
-          
-          <div className="bg-[#f2f2f2] p-8 shadow-md">
-            <h3 className="text-base font-bold tracking-wide mb-4">DEVELOPMENT</h3>
-            <p className="text-sm leading-relaxed">
-              I specialize in building high-quality, responsive, and accessible websites and web applications using a range of front-end and back-end technologies.
+            
+            <p className="text-gray-600 leading-relaxed">
+              With expertise in both front-end and back-end development, I specialize in creating responsive, user-friendly applications that solve real-world problems. I believe in writing clean, maintainable code and following best practices to ensure the highest quality of work.
             </p>
+
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">Frontend</h3>
+                <ul className="text-gray-600 space-y-1">
+                  <li>• React.js</li>
+                  <li>• TypeScript</li>
+                  <li>• HTML5/CSS3</li>
+                  <li>• JavaScript</li>
+                </ul>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">Backend</h3>
+                <ul className="text-gray-600 space-y-1">
+                  <li>• Node.js</li>
+                  <li>• Express.js</li>
+                  <li>• MongoDB</li>
+                  <li>• REST APIs</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          
-          <div className="bg-[#f2f2f2] p-8 shadow-md">
-            <h3 className="text-base font-bold tracking-wide mb-4">MAINTENANCE</h3>
-            <p className="text-sm leading-relaxed">
-              I offer ongoing maintenance and support services to ensure your website continues to operate smoothly, implementing updates, fixing issues, and making recommendations.
-            </p>
+
+          {/* Experience Timeline */}
+          <div className="space-y-8">
+            <div className="flex items-start space-x-4">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <GraduationCap className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Education</h3>
+                <p className="text-gray-600">Bachelor of Technology in Computer Science</p>
+                <p className="text-sm text-gray-500">2020 - 2024</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Briefcase className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Experience</h3>
+                <p className="text-gray-600">Full Stack Developer</p>
+                <p className="text-sm text-gray-500">2023 - Present</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Code2 className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">React</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">TypeScript</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Node.js</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">MongoDB</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">HTML5</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CSS3</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Git</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <div className="separator mt-16">
-          <span></span>
         </div>
       </div>
     </section>
