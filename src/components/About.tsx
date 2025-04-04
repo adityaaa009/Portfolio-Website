@@ -1,4 +1,5 @@
-import { Code2, GraduationCap, Briefcase } from "lucide-react";
+import { Code2, GraduationCap, Briefcase, Download } from "lucide-react";
+import { Button } from "./ui/button";
 
 export const About = () => {
   return (
@@ -19,6 +20,24 @@ export const About = () => {
             <p className="text-gray-600 leading-relaxed">
               With expertise in both front-end and back-end development, I specialize in creating responsive, user-friendly applications that solve real-world problems. I believe in writing clean, maintainable code and following best practices to ensure the highest quality of work.
             </p>
+
+            <div className="flex justify-start">
+              <Button
+                variant="default"
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700"
+                asChild
+              >
+                <a
+                  href="https://drive.google.com/file/d/1owMqHUsFY93ZfblabFNa4jUwe5iO755e/view?usp=drivesdk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download />
+                  Download Resume
+                </a>
+              </Button>
+            </div>
 
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="bg-gray-50 p-4 rounded-lg">
