@@ -1,69 +1,89 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
+Welcome to my portfolio website! You can access the live site [here](https://adityazportfolio.netlify.app/).
 
-**URL**: https://lovable.dev/projects/4d15fb06-82ce-4b0d-8db2-0dd1b037c075
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## How can I edit this code?
+## Introduction
+This is a personal portfolio website showcasing my projects, skills, and experiences. It is designed to provide a clean and professional online presence.
 
-There are several ways of editing your application.
+## Features
+- Responsive design
+- Interactive UI/UX
+- Project showcase
+- Contact form
+- Smooth animations
 
-**Use Lovable**
+## Technologies Used
+- **TypeScript**: The primary language used for development (97.7%).
+- **CSS**: Used for styling the website (1.3%).
+- **Other**: Additional technologies and libraries (1%).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4d15fb06-82ce-4b0d-8db2-0dd1b037c075) and start prompting.
+## Getting Started
+To get a local copy up and running, follow these steps:
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js
+- npm or yarn
 
-**Use your preferred IDE**
+### Installation
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/adityaaa009/Portfolio-Website.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Portfolio-Website
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Running the Project
+Start the development server:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm start
 ```
+or
+```sh
+yarn start
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Edit a file directly in GitHub**
+## Usage
+### Adding New Projects
+To add a new project to the portfolio, update the `projects` section in the appropriate data file (e.g., `src/data/projects.ts`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Customizing Styles
+To customize the styles, modify the CSS files located in the `src/styles` directory.
 
-**Use GitHub Codespaces**
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## What technologies are used for this project?
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This project is built with .
+## Contact
+Aditya - [your-email@example.com](mailto:adityalkosharma@gmail.com)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Project Link: [https://github.com/adityaaa009/Portfolio-Website](https://github.com/adityaaa009/Portfolio-Website)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4d15fb06-82ce-4b0d-8db2-0dd1b037c075) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
