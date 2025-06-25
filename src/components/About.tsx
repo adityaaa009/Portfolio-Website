@@ -1,3 +1,4 @@
+
 import { Code2, GraduationCap, Briefcase, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -29,7 +30,7 @@ export const About = () => {
                 asChild
               >
                 <a
-                  href="https://drive.google.com/file/d/1owMqHUsFY93ZfblabFNa4jUwe5iO755e/view?usp=drivesdk"
+                  href="https://drive.google.com/file/d/1z83S0ikieimv86Iop3aKTmSds9ADrwTL/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
